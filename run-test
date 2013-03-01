@@ -1,0 +1,9 @@
+if [[ -d "tmpbin" && ! -L "tmpbin" ]] ; then
+  rm -rf tmpbin
+fi
+mkdir tmpbin
+erlc -o ./tmpbin ./src/ping_of_death_chalkboard.erl ./test/ping_of_death_chalkboard_test.erl
+erl -noshell -pa tmpbin -eval "eunit:test(ping_of_death_chalkboard_test, [verbose])" -s init stop
+rm -rf tmpbin
+exit 0
+

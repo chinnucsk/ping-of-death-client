@@ -1,0 +1,5 @@
+echo "What is your name?"
+read name
+echo "Where is the server located?"
+read location
+erl -name $name -location $location -noshell -setcookie test -pa ebin -s hidden start -playername $name

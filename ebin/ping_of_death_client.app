@@ -1,0 +1,9 @@
+{application,ping_of_death_client,
+             [{description,[]},
+              {vsn,"1"},
+              {registered,[]},
+              {applications,[kernel,stdlib]},
+              {mod,{ping_of_death_client_app,[]}},
+              {env,[]},
+              {modules,[hidden,ping_of_death_chalkboard,
+                        ping_of_death_client]}]}.
